@@ -1,0 +1,15 @@
+fastapi>=0.115,<1
+uvicorn[standard]>=0.34,<1
+sqlalchemy>=2.0.38,<2.1
+pymysql[rsa]>=1.1,<2
+pydantic-settings>=2.8,<3
+python-multipart>=0.0.20,<1
+httpx>=0.28,<1
+pandas>=2.2,<3
+numpy>=2,<3
+scikit-learn>=1.6,<2
+xgboost>=3,<4
+joblib>=1.4,<2
+boto3>=1.36,<2
+pytest>=8,<10
+tzdata>=2025.1

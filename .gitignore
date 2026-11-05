@@ -1,0 +1,14 @@
+.venv/
+.env
+__pycache__/
+.pytest_cache/
+*.pyc
+.runtime/
+data/raw/*
+data/models/*
+data/events/*
+data/*.db
+!data/raw/.gitkeep
+!data/models/.gitkeep
+!data/events/.gitkeep
+*.log

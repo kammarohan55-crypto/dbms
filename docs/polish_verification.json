@@ -1,0 +1,197 @@
+{
+  "checked_at": "2026-10-26T23:09:56.358655+00:00",
+  "health": {
+    "status": "ready",
+    "relational": {
+      "backend": "mysql",
+      "ready": true
+    },
+    "events": {
+      "backend": "local journal (AWS deferred)",
+      "ready": true
+    },
+    "aws_deferred": true,
+    "scope": "Local research simulation; no physical grid control"
+  },
+  "browser_created_run": {
+    "id": "aaed8d7a-68c2-4d77-8d1e-5a0851803b2a",
+    "comparison_id": "62bcfe58-c99d-43d1-8d29-adb0bff4c148",
+    "scenario": "high_demand",
+    "policies": [
+      {
+        "id": "68e783a3-aab0-48dc-8edd-5f7870ecc441",
+        "policy": "baseline",
+        "status": "completed",
+        "total_steps": 12,
+        "completed_steps": 12
+      },
+      {
+        "id": "aaed8d7a-68c2-4d77-8d1e-5a0851803b2a",
+        "policy": "gridmind",
+        "status": "completed",
+        "total_steps": 12,
+        "completed_steps": 12
+      }
+    ],
+    "identical_input_manifest": true
+  },
+  "saved_evidence_counts": {
+    "states": 12,
+    "decisions": 72,
+    "safety_checks": 12,
+    "observations": 12,
+    "settled_trades": 12,
+    "state_csv_rows": 12
+  },
+  "relational_tables": 14,
+  "index_demonstration": {
+    "available": true,
+    "indexed_ms": 0.7699000416323543,
+    "nonindexed_ms": 1.894499990157783,
+    "plans": {
+      "indexed": [
+        {
+          "id": 1,
+          "select_type": "SIMPLE",
+          "table": "energy_observations",
+          "partitions": null,
+          "type": "range",
+          "possible_keys": "ix_observation_region_time",
+          "key": "ix_observation_region_time",
+          "key_len": "151",
+          "ref": null,
+          "rows": 1,
+          "filtered": 100.0,
+          "Extra": "Using index condition"
+        }
+      ],
+      "nonindexed": [
+        {
+          "id": 1,
+          "select_type": "SIMPLE",
+          "table": "energy_observations",
+          "partitions": null,
+          "type": "ALL",
+          "possible_keys": null,
+          "key": null,
+          "key_len": null,
+          "ref": null,
+          "rows": 3649,
+          "filtered": 33.33,
+          "Extra": "Using where; Using filesort"
+        }
+      ]
+    },
+    "repetitions": 5,
+    "statistic": "median milliseconds, warm connection",
+    "row_count": 3894,
+    "note": "Equivalent queries; no index dropped. Warm-cache microbenchmark, not a production performance claim."
+  },
+  "comparison": {
+    "comparison_id": "62bcfe58-c99d-43d1-8d29-adb0bff4c148",
+    "runs": [
+      {
+        "id": "68e783a3-aab0-48dc-8edd-5f7870ecc441",
+        "policy": "baseline",
+        "status": "completed",
+        "metrics": {
+          "agent_failures": 0.0,
+          "battery_throughput_kwh": 102.6,
+          "critical_served_kwh": 186.898922120731,
+          "critical_unmet_kwh": 0.0,
+          "energy_balance_max_abs_kw": 1.4210854715202004e-14,
+          "flexibility_kwh": 0.0,
+          "grid_export_kwh": 0.0,
+          "grid_import_kwh": 500.8711742705432,
+          "gross_demand_kwh": 747.595688482924,
+          "operating_cost": 3205.5755153314767,
+          "p2p_transaction_value": 0.0,
+          "p2p_volume_kwh": 0.0,
+          "peak_grid_import_kw": 100.0,
+          "renewable_generation_kwh": 120.84085000172566,
+          "renewable_spill_kwh": 0.0,
+          "renewable_utilization_pct": 100.0,
+          "safety_rejections": 0.0,
+          "served_demand_kwh": 724.3120242722687,
+          "unmet_demand_kwh": 23.283664210655246
+        }
+      },
+      {
+        "id": "aaed8d7a-68c2-4d77-8d1e-5a0851803b2a",
+        "policy": "gridmind",
+        "status": "completed",
+        "metrics": {
+          "agent_failures": 0.0,
+          "battery_throughput_kwh": 36.681530476292764,
+          "critical_served_kwh": 186.898922120731,
+          "critical_unmet_kwh": 0.0,
+          "energy_balance_max_abs_kw": 1.4210854715202004e-14,
+          "flexibility_kwh": 0.0,
+          "grid_export_kwh": 0.0,
+          "grid_import_kwh": 590.0733080049056,
+          "gross_demand_kwh": 747.595688482924,
+          "operating_cost": 3776.469171231396,
+          "p2p_transaction_value": 619.3093562588439,
+          "p2p_volume_kwh": 120.84085000172564,
+          "peak_grid_import_kw": 100.0,
+          "renewable_generation_kwh": 120.84085000172566,
+          "renewable_spill_kwh": 0.0,
+          "renewable_utilization_pct": 100.0,
+          "safety_rejections": 0.0,
+          "served_demand_kwh": 747.595688482924,
+          "unmet_demand_kwh": 0.0
+        }
+      }
+    ]
+  },
+  "guide_routes_and_notes_available": true,
+  "limits": [
+    "Local journal; AWS remains deferred.",
+    "Browser checks cover local simulation, not physical equipment.",
+    "Direct file-protocol opening was blocked by preview browser policy; HTTP guide exercised, relative assets and no application API dependency inspected."
+  ],
+  "test_suite": {
+    "passed": 141,
+    "failed": 0,
+    "skipped": 0,
+    "mysql_included": true,
+    "report": "test-results.xml",
+    "dependency_deprecation_warnings": 1
+  },
+  "browser_checks": {
+    "dashboard_widths_px": [
+      1265,
+      394
+    ],
+    "guide_widths_px": [
+      1265,
+      394
+    ],
+    "page_wide_horizontal_overflow": false,
+    "dashboard": [
+      "default completed GRIDMIND run",
+      "saved-state scrubber and finite playback",
+      "observation search and 12-row pagination",
+      "forecast evidence",
+      "microgrid flow and asset registry",
+      "agent/safety filters",
+      "actual market records",
+      "paired comparison",
+      "database inventory and live plans",
+      "new 12-step pair via form"
+    ],
+    "guide": [
+      "finite architecture sequence",
+      "transaction commit and injected rollback",
+      "identical and conflicting retries",
+      "unsafe 120 kW discharge rejected against 60 kW limit",
+      "60 kW half-hour charge updates 144 to 172.5 kWh",
+      "clickable metric definition entity",
+      "finite indexed illustration finds 6 of 6 entries",
+      "step 25 SAFETY_CHECK event key",
+      "partial-failure sequence",
+      "reduced-motion toggle",
+      "mobile chapter menu"
+    ]
+  }
+}

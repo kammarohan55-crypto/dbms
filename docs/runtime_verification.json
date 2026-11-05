@@ -1,0 +1,142 @@
+{
+  "health": {
+    "status": "ready",
+    "relational": {
+      "backend": "mysql",
+      "ready": true
+    },
+    "events": {
+      "backend": "local journal (AWS deferred)",
+      "ready": true
+    },
+    "aws_deferred": true,
+    "scope": "Local research simulation; no physical grid control"
+  },
+  "runs": [
+    {
+      "id": "465805b0-aea5-400c-a622-904d2977adb0",
+      "name": "normal",
+      "status": "completed",
+      "completed_steps": 8,
+      "total_steps": 8,
+      "policy": "baseline"
+    },
+    {
+      "id": "9de43708-fc20-4f84-ac1f-d61cf5bdf8c7",
+      "name": "normal",
+      "status": "completed",
+      "completed_steps": 8,
+      "total_steps": 8,
+      "policy": "gridmind"
+    },
+    {
+      "id": "355aa710-2c2e-4148-9755-bbc2a6a92bfd",
+      "name": "high_demand",
+      "status": "completed",
+      "completed_steps": 48,
+      "total_steps": 48,
+      "policy": "gridmind"
+    },
+    {
+      "id": "acdb9a84-00f1-4ed7-a475-304d51b79ac3",
+      "name": "high_demand",
+      "status": "completed",
+      "completed_steps": 48,
+      "total_steps": 48,
+      "policy": "baseline"
+    }
+  ],
+  "benchmark": {
+    "available": true,
+    "indexed_ms": 0.7517999620176852,
+    "nonindexed_ms": 1.8157000304199755,
+    "plans": {
+      "indexed": [
+        {
+          "id": 1,
+          "select_type": "SIMPLE",
+          "table": "energy_observations",
+          "partitions": null,
+          "type": "range",
+          "possible_keys": "ix_observation_region_time",
+          "key": "ix_observation_region_time",
+          "key_len": "151",
+          "ref": null,
+          "rows": 1,
+          "filtered": 100.0,
+          "Extra": "Using index condition"
+        }
+      ],
+      "nonindexed": [
+        {
+          "id": 1,
+          "select_type": "SIMPLE",
+          "table": "energy_observations",
+          "partitions": null,
+          "type": "ALL",
+          "possible_keys": null,
+          "key": null,
+          "key_len": null,
+          "ref": null,
+          "rows": 3741,
+          "filtered": 33.33,
+          "Extra": "Using where; Using filesort"
+        }
+      ]
+    },
+    "repetitions": 5,
+    "statistic": "median milliseconds, warm connection",
+    "row_count": 3894,
+    "note": "Equivalent queries; no index dropped. Warm-cache microbenchmark, not a production performance claim."
+  },
+  "table_counts": [
+    {
+      "name": "audit_logs",
+      "count": 11
+    },
+    {
+      "name": "data_sources",
+      "count": 1
+    },
+    {
+      "name": "microgrid_assets",
+      "count": 0
+    },
+    {
+      "name": "regions",
+      "count": 1
+    },
+    {
+      "name": "energy_observations",
+      "count": 3894
+    },
+    {
+      "name": "market_participants",
+      "count": 3
+    },
+    {
+      "name": "model_registry",
+      "count": 1
+    },
+    {
+      "name": "simulation_runs",
+      "count": 4
+    },
+    {
+      "name": "forecasts",
+      "count": 494
+    },
+    {
+      "name": "market_orders",
+      "count": 138
+    },
+    {
+      "name": "run_metrics",
+      "count": 76
+    },
+    {
+      "name": "market_trades",
+      "count": 82
+    }
+  ]
+}

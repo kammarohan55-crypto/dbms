@@ -1,0 +1,10 @@
+{
+  "backend": "MySQL 8.4.13",
+  "fresh_sql_scripts": [
+    "001_schema.sql",
+    "002_analytics.sql",
+    "004_metric_definitions.sql"
+  ],
+  "recreated_successfully": true,
+  "isolated_test_schema_removed": true
+}

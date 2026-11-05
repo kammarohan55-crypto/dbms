@@ -1,0 +1,58 @@
+{
+  "comparison_id": "0b0e0c7c-9a95-43b9-af6d-2b90dac67a7d",
+  "runs": [
+    {
+      "id": "3e5ba0ec-d713-48e8-a4d2-c05ca267402b",
+      "policy": "gridmind",
+      "status": "completed",
+      "metrics": {
+        "agent_failures": 0.0,
+        "battery_throughput_kwh": 406.7469790369956,
+        "critical_served_kwh": 490.3554489641938,
+        "critical_unmet_kwh": 52.609057932607584,
+        "energy_balance_max_abs_kw": 0.0,
+        "flexibility_kwh": 202.9278797158092,
+        "grid_export_kwh": 0.0,
+        "grid_import_kwh": 0.0,
+        "gross_demand_kwh": 2171.8580275872055,
+        "operating_cost": 0.0,
+        "p2p_transaction_value": 6603.670857026042,
+        "p2p_volume_kwh": 1069.624407227514,
+        "peak_grid_import_kw": 0.0,
+        "renewable_generation_kwh": 1229.4914132916376,
+        "renewable_spill_kwh": 0.0,
+        "renewable_utilization_pct": 100.0,
+        "safety_rejections": 0.0,
+        "served_demand_kwh": 1316.5043802003852,
+        "unmet_demand_kwh": 652.4257676710112
+      }
+    },
+    {
+      "id": "e0f7aa1a-578c-44a2-8ed2-0ad3f50e1ba8",
+      "policy": "baseline",
+      "status": "completed",
+      "metrics": {
+        "agent_failures": 0.0,
+        "battery_throughput_kwh": 406.7469790369956,
+        "critical_served_kwh": 490.3554489641938,
+        "critical_unmet_kwh": 52.609057932607584,
+        "energy_balance_max_abs_kw": 1.4210854715202004e-14,
+        "flexibility_kwh": 0.0,
+        "grid_export_kwh": 0.0,
+        "grid_import_kwh": 0.0,
+        "gross_demand_kwh": 2171.8580275872055,
+        "operating_cost": 0.0,
+        "p2p_transaction_value": 0.0,
+        "p2p_volume_kwh": 0.0,
+        "peak_grid_import_kw": 0.0,
+        "renewable_generation_kwh": 1229.4914132916376,
+        "renewable_spill_kwh": 0.0,
+        "renewable_utilization_pct": 100.0,
+        "safety_rejections": 0.0,
+        "served_demand_kwh": 1316.5043802003847,
+        "unmet_demand_kwh": 855.3536473868206
+      }
+    }
+  ],
+  "errors": []
+}

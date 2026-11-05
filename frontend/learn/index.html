@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#163d30">
+  <meta name="description" content="An illustrated, interactive guide to GRIDMIND: energy simulation, system architecture, database normalization and atomic transactions.">
+  <title>Inside GRIDMIND · Learning guide</title>
+  <link rel="stylesheet" href="guide.css?v=20261027-1">
+  <script src="guide.js?v=20261027-1" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#chapter-title">Skip to chapter</a>
+  <header class="topbar">
+    <a class="brand" href="#overview" aria-label="GRIDMIND learning guide home"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3 5 9v14l11 6 11-6V9Z"/><path d="m18 8-8 10h6l-2 7 9-11h-6Z"/></svg><span>GRIDMIND<span class="brand-sub">THE LEARNING GUIDE</span></span></a>
+    <div class="top-actions"><button class="quiet" id="motion-toggle" aria-pressed="false">Reduce motion</button><a class="dashboard-link" href="../">Open dashboard <span aria-hidden="true">↗</span></a></div>
+  </header>
+  <div class="layout">
+    <aside class="sidebar" aria-label="Learning navigation">
+      <div class="course-label">FROM IDEA TO DATABASE</div>
+      <h2>Inside the system.</h2>
+      <p class="sidebar-intro">A guided tour of the project, one clear idea at a time.</p>
+      <div class="progress-label"><span id="progress-text">0 of 12 explored</span><span id="progress-percent">0%</span></div>
+      <div class="progress-track" role="progressbar" aria-label="Chapters explored" aria-valuemin="0" aria-valuemax="12" aria-valuenow="0" id="course-progress"><span id="progress-fill"></span></div>
+      <button class="chapter-menu quiet" id="chapter-menu" aria-expanded="false" aria-controls="chapter-nav">Choose a chapter <span aria-hidden="true">⌄</span></button>
+      <nav id="chapter-nav" aria-label="Chapters"></nav>
+      <div class="sidebar-note"><span class="status-dot" aria-hidden="true"></span><span>Works offline. Examples on this page are teaching illustrations unless marked as saved evidence.<br><a id="notes-link" href="/learning-notes" download>Download detailed notes ↓</a></span></div>
+    </aside>
+    <main id="main" class="main">
+      <div class="chapter-meta"><span id="chapter-number">CHAPTER 01 / 12</span><span id="chapter-time"></span></div>
+      <article id="chapter" aria-labelledby="chapter-title"></article>
+      <footer class="chapter-footer"><button id="previous-chapter" class="quiet">← Previous</button><span id="footer-progress"></span><button id="next-chapter" class="primary">Next chapter →</button></footer>
+      <div class="page-note">Built from this project's implementation. No connection to physical grid equipment. AWS integration remains deferred.</div>
+    </main>
+  </div>
+  <noscript><div class="noscript">This guide uses JavaScript for chapter navigation and illustrations. Enable it to explore the guide, or read docs/LEARNING_GUIDE.md in the project folder.</div></noscript>
+</body>
+</html>

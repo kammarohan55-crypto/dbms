@@ -1,0 +1,54 @@
+{
+  "health": {
+    "status": "ready",
+    "relational": {
+      "backend": "mysql",
+      "ready": true
+    },
+    "events": {
+      "backend": "local journal (AWS deferred)",
+      "ready": true
+    },
+    "aws_deferred": true,
+    "scope": "Local research simulation; no physical grid control"
+  },
+  "schema_version": "002_normalized_integrity",
+  "observed_series": {
+    "source_id": "d6a446a1-159e-4f18-8800-be6233098aa2",
+    "source_name": "Karnataka daily supplied energy",
+    "region_id": "d493f36a-65aa-4ea8-af1c-46f96ec84862",
+    "region_name": "Karnataka",
+    "metric": "supplied_energy_gwh",
+    "unit": "GWh",
+    "series_key": "regional",
+    "count": 3894,
+    "start": "2012-12-31T18:30:00Z",
+    "end": "2024-04-27T18:30:00Z",
+    "start_at": "2012-12-31T18:30:00Z",
+    "end_at": "2024-04-27T18:30:00Z"
+  },
+  "completed_run": {
+    "id": "3e5ba0ec-d713-48e8-a4d2-c05ca267402b",
+    "comparison_id": "0b0e0c7c-9a95-43b9-af6d-2b90dac67a7d",
+    "steps": 48
+  },
+  "exports": {
+    "states": 48,
+    "decisions": 288,
+    "safety_checks": 48,
+    "observations": 48,
+    "trades": 76
+  },
+  "browser_control_run": {
+    "id": "0e9be4ee-dae4-48a7-9a3b-bd48a1979bb3",
+    "status": "cancelled",
+    "completed_steps": 2,
+    "final_metrics": {}
+  },
+  "forecast_repeated_request": {
+    "model_id": "28216605-7084-424b-8168-5929cfc54ef7",
+    "predictions": 14,
+    "identical_record_ids_and_values": true
+  },
+  "candidate_selection": "Lowest chronological validation MAE: xgb_absolute (8.20178 GWh); persistence wins ties. Selection frozen before final-test scoring."
+}
